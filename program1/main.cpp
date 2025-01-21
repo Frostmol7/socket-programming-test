@@ -1,4 +1,3 @@
-// program1/main.cpp
 #include <iostream>
 #include <thread>
 #include <mutex>
@@ -25,14 +24,12 @@ void input_thread() {
             std::cerr << "Invalid input. Try again.\n";
             continue;
         }
-
-        // Count character frequency
+        
         std::map<char, int> char_count;
         for (char c : input) {
             char_count[c]++;
         }
-
-        // Prepare data for buffer
+        
         std::string buffer_data;
         for (const auto &pair : char_count) {
             buffer_data += pair.first + std::to_string(pair.second) + " ";
@@ -52,8 +49,6 @@ void processing_thread(SocketManager &socket_manager) {
     while (true) {
         std::unique_lock<std::mutex> lock(buffer_mutex);
         buffer_cv.wait(lock, [] { return data_ready; });
-
-        // Process buffer
         std::string data_to_send = shared_buffer;
         shared_buffer.clear();
         data_ready = false;
@@ -69,7 +64,7 @@ void processing_thread(SocketManager &socket_manager) {
 }
 
 int main() {
-    SocketManager socket_manager(8080); // Port for the server
+    SocketManager socket_manager(8080);
     if (!socket_manager.initialize()) {
         std::cerr << "Failed to initialize socket.\n";
         return 1;
