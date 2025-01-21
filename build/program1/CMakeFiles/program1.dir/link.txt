@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/program1.dir/main.cpp.o CMakeFiles/program1.dir/socket_manager.cpp.o -o program1  -lpthread 

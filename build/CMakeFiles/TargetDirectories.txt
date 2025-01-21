@@ -1,0 +1,8 @@
+/home/user/build/CMakeFiles/edit_cache.dir
+/home/user/build/CMakeFiles/rebuild_cache.dir
+/home/user/build/program1/CMakeFiles/program1.dir
+/home/user/build/program1/CMakeFiles/edit_cache.dir
+/home/user/build/program1/CMakeFiles/rebuild_cache.dir
+/home/user/build/program2/CMakeFiles/program2.dir
+/home/user/build/program2/CMakeFiles/edit_cache.dir
+/home/user/build/program2/CMakeFiles/rebuild_cache.dir
